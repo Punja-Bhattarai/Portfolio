@@ -57,12 +57,12 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <Link
-          href="/#home"
-          className="font-display text-sm font-bold tracking-widest2 uppercase text-cream hover:text-gold2 transition-colors"
-        >
-          Punja&nbsp;Bhattarai
-        </Link>
+          <Link
+            href="/#home"
+            className="font-display text-base font-bold tracking-wide text-cream transition-colors hover:text-gold2"
+          >
+            Punja&nbsp;<span className="gold-text">Bhattarai</span>
+          </Link>
 
         <ul className="hidden items-center gap-7 lg:flex">
           {LINKS.map((l) => (

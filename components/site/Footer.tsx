@@ -20,7 +20,7 @@ export function Footer({ socials }: { socials: SocialLink[] }) {
   return (
     <footer className="border-t border-line py-12">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-5 md:flex-row md:px-8">
-        <p className="font-display text-sm font-bold tracking-widest2 uppercase">
+        <p className="font-display text-base font-bold tracking-wide">
           Punja&nbsp;<span className="gold-text">Bhattarai</span>
         </p>
 
