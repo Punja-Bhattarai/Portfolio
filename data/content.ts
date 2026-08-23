@@ -59,8 +59,8 @@ export const PROFILE = {
   ],
   philosophy:
     "Write code that is simple, honest and maintainable. Build things that work before making them fancy — then make them beautiful without breaking them.",
-  email: "", // e.g. "you@example.com" — shown in contact section when set
-  location: "Nepal",
+  email: "bhattaraipunja@gmail.com",
+  location: "Butwal, Rupandehi, Nepal",
   avatarImage: "/images/portrait.svg",
   cvFile: "/cv/CV.pdf",
 };
