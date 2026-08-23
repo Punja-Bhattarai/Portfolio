@@ -52,6 +52,13 @@ export function Footer({ socials }: { socials: SocialLink[] }) {
           >
             🔒 Private Gallery
           </Link>
+          <Link
+            href="/admin"
+            className="font-mono text-[11px] uppercase tracking-wider text-mute/50 transition-colors hover:text-gold2/80"
+            title="Admin login"
+          >
+            Admin
+          </Link>
           <p className="font-mono text-[11px] text-mute/70">
             © {year} — Built with care
           </p>
