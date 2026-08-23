@@ -81,6 +81,14 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <Link
+            href="/admin"
+            aria-label="Admin"
+            title="Admin"
+            className="glass hidden rounded-full p-2.5 text-mute transition-all duration-300 hover:border-gold/50 hover:text-gold2 sm:block"
+          >
+            <Icon name="settings" className="h-3.5 w-3.5" />
+          </Link>
+          <Link
             href="/private-gallery"
             className="glass hidden items-center gap-2 rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-[0.14em] text-gold2 transition-all duration-300 hover:border-gold/50 hover:bg-gold/10 sm:inline-flex"
           >
@@ -135,6 +143,15 @@ export function Navbar() {
                   className="mt-2 flex items-center gap-2 rounded-lg border border-gold/30 bg-gold/10 px-4 py-3 font-mono text-sm uppercase tracking-widest text-gold2"
                 >
                   <Icon name="lock" className="h-4 w-4" /> Private Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/admin"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-2 rounded-lg px-4 py-3 font-mono text-sm uppercase tracking-widest text-mute"
+                >
+                  <Icon name="settings" className="h-4 w-4" /> Admin
                 </Link>
               </li>
             </ul>
