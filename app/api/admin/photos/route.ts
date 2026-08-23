@@ -7,6 +7,7 @@ import {
   detectImageMime,
   extensionForMime,
   getSignedUrls,
+  invalidateSignedUrls,
   uploadObject,
 } from "@/lib/storage";
 import { getSupabaseAdmin } from "@/lib/supabase";
@@ -213,5 +214,6 @@ export const DELETE = withGuard(async (req: NextRequest) => {
   const { error } = await sb.from("photos").delete().eq("id", id);
   if (error) return jsonError(500, "server_error", "Could not delete photo.");
   await deleteObjects([photo.storage_path, photo.thumb_path]).catch(() => {});
+  invalidateSignedUrls([photo.storage_path, photo.thumb_path]);
   return jsonOk({ ok: true });
 });

@@ -6,6 +6,10 @@ import { getSupabaseAdmin, supabaseConfigured } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 
+const CACHE_HEADERS = {
+  headers: { "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300" },
+};
+
 interface ProjectRow {
   slug: string;
   title: string;
@@ -61,7 +65,7 @@ export const GET = withGuard(async (_req: NextRequest) => {
       projects: [],
       lab: [],
       albums: [],
-    });
+    }, CACHE_HEADERS);
   }
 
   try {
@@ -131,7 +135,7 @@ export const GET = withGuard(async (_req: NextRequest) => {
       projects,
       lab,
       albums,
-    });
+    }, CACHE_HEADERS);
   } catch {
     // Database unreachable → static defaults still render the site.
     return jsonOk({
@@ -143,6 +147,6 @@ export const GET = withGuard(async (_req: NextRequest) => {
       projects: [],
       lab: [],
       albums: [],
-    });
+    }, CACHE_HEADERS);
   }
 });

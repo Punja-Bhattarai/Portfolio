@@ -4,6 +4,10 @@ import { getSupabaseAdmin, supabaseConfigured } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 
+const CACHE_HEADERS = {
+  headers: { "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300" },
+};
+
 interface PhotoRow {
   id: string;
   album_id: string | null;
@@ -18,7 +22,7 @@ interface PhotoRow {
 
 export const GET = withGuard(async () => {
   if (!supabaseConfigured())
-    return jsonOk({ photos: [], configured: false });
+    return jsonOk({ photos: [], configured: false }, CACHE_HEADERS);
 
   try {
     const sb = getSupabaseAdmin();
@@ -47,9 +51,9 @@ export const GET = withGuard(async () => {
       width: p.width,
       height: p.height,
     }));
-    return jsonOk({ photos, configured: true });
+    return jsonOk({ photos, configured: true }, CACHE_HEADERS);
   } catch (err) {
     console.error("[gallery/public]", err);
-    return jsonOk({ photos: [], configured: false });
+    return jsonOk({ photos: [], configured: false }, CACHE_HEADERS);
   }
 });

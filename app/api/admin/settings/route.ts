@@ -7,6 +7,7 @@ import {
   detectImageMime,
   extensionForMime,
   getSignedUrl,
+  invalidateSignedUrls,
   uploadObject,
 } from "@/lib/storage";
 import { getSupabaseAdmin } from "@/lib/supabase";
@@ -86,6 +87,7 @@ export const POST = withGuard(async (req: NextRequest) => {
       return jsonError(415, "unsupported_type", "Avatar must be JPG, PNG or WEBP.");
     const path = `assets/avatar${extensionForMime(mime)}`;
     await uploadObject(path, await file.arrayBuffer(), mime);
+    invalidateSignedUrls([path]);
     // remove other-format leftovers
     for (const alt of ["assets/avatar.jpg", "assets/avatar.png", "assets/avatar.webp"]) {
       if (alt !== path) await deleteObjects([alt]).catch(() => {});
@@ -105,6 +107,7 @@ export const POST = withGuard(async (req: NextRequest) => {
       return jsonError(415, "unsupported_type", "CV must be a PDF file.");
     const path = "assets/cv.pdf";
     await uploadObject(path, await file.arrayBuffer(), "application/pdf");
+    invalidateSignedUrls([path]);
     await sb
       .from("site_settings")
       .upsert({ key: ASSET_KEY, value: { ...(await currentAssets(sb)), cv_path: path } });
