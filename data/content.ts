@@ -34,8 +34,8 @@ export interface ProjectDefault {
 
 export const PROFILE = {
   name: "Punja Bhattarai",
-  firstName: "PUNJA",
-  lastName: "BHATTARAI",
+  firstName: "Punja",
+  lastName: "Bhattarai",
   roles: ["Developer", "Designer", "Creator"],
   intro:
     "I'm a BCS student passionate about software development — building for the web, exploring backend systems, and crafting interactive experiences with Unity and 3D applications.",
