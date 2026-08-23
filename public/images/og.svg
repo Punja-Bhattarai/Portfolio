@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#12121a"/><stop offset="1" stop-color="#c9a15e"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="630" fill="#0d0d14"/>
+<rect width="1200" height="630" fill="url(#g)" opacity="0.85"/>
+<circle cx="984" cy="158" r="284" fill="#ffffff" opacity="0.06"/>
+<circle cx="180" cy="567" r="220" fill="#000000" opacity="0.18"/>
+<text x="600.0" y="307" font-family="Arial, sans-serif" font-size="57" font-weight="bold" fill="#ffffff" text-anchor="middle">PUNJA BHATTARAI</text>
+<text x="600.0" y="359" font-family="monospace" font-size="24" letter-spacing="6" fill="#ffffff" opacity="0.75" text-anchor="middle">DEVELOPER · DESIGNER · CREATOR</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0.8" y2="1">
+<stop offset="0" stop-color="#17171f"/><stop offset="0.55" stop-color="#101018"/><stop offset="1" stop-color="#0a0a0f"/>
+</linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.42" r="0.5">
+<stop offset="0" stop-color="#c9a15e" stop-opacity="0.28"/><stop offset="1" stop-color="#c9a15e" stop-opacity="0"/>
+</radialGradient></defs>
+<rect width="800" height="1000" fill="url(#g)"/>
+<rect width="800" height="1000" fill="url(#glow)"/>
+<circle cx="400" cy="380" r="170" fill="none" stroke="#c9a15e" stroke-width="2" opacity="0.5"/>
+<text x="400" y="440" font-family="Georgia, serif" font-size="180" font-style="italic" fill="#e6c88a" text-anchor="middle">PB</text>
+<line x1="250" y1="600" x2="550" y2="600" stroke="#c9a15e" stroke-width="1.5" opacity="0.5"/>
+<text x="400" y="650" font-family="Courier New, monospace" font-size="26" letter-spacing="10" fill="#98948c" text-anchor="middle">PUNJA BHATTARAI</text>
+<text x="400" y="692" font-family="Courier New, monospace" font-size="16" letter-spacing="6" fill="#565664" text-anchor="middle">DEVELOPER — DESIGNER — CREATOR</text>
+<text x="400" y="950" font-family="Courier New, monospace" font-size="13" letter-spacing="4" fill="#3a3a46" text-anchor="middle">REPLACE WITH A REAL PHOTO VIA ADMIN SETTINGS</text>
+</svg>
