@@ -14,7 +14,7 @@ export const GET = withGuard(async (req: NextRequest) => {
   const sb = getSupabaseAdmin();
   const { data, error } = await sb
     .from("albums")
-    .select("*, photos(count)")
+    .select("*, photos!photos_album_id_fkey(count)")
     .order("sort_order")
     .order("created_at", { ascending: false });
   if (error) return jsonError(500, "server_error", "Could not load albums.");

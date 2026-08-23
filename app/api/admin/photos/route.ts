@@ -31,7 +31,7 @@ export const GET = withGuard(async (req: NextRequest) => {
   const sb = getSupabaseAdmin();
   let query = sb
     .from("photos")
-    .select("*, albums(name)")
+    .select("*, albums!photos_album_id_fkey(name)")
     .order("created_at", { ascending: false })
     .limit(limit);
   if (q) query = query.or(`title.ilike.%${q}%,filename.ilike.%${q}%`);
