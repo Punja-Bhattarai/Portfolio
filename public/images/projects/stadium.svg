@@ -1,37 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
-  <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#101728"/>
-      <stop offset="1" stop-color="#1b2440"/>
-    </linearGradient>
-    <linearGradient id="pitch" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2e7d4f"/>
-      <stop offset="1" stop-color="#1f5c39"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="38%" r="60%">
-      <stop offset="0" stop-color="#c9a15e" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#c9a15e" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <rect width="800" height="500" fill="url(#sky)"/>
-  <rect width="800" height="500" fill="url(#glow)"/>
-  <!-- stands -->
-  <ellipse cx="400" cy="300" rx="330" ry="150" fill="#232a45"/>
-  <ellipse cx="400" cy="295" rx="270" ry="115" fill="#2c3557"/>
-  <ellipse cx="400" cy="290" rx="215" ry="88" fill="url(#pitch)"/>
-  <!-- pitch lines -->
-  <ellipse cx="400" cy="290" rx="180" ry="70" fill="none" stroke="#dff0e2" stroke-width="3" opacity="0.85"/>
-  <line x1="220" y1="290" x2="580" y2="290" stroke="#dff0e2" stroke-width="3" opacity="0.85"/>
-  <circle cx="400" cy="290" r="26" fill="none" stroke="#dff0e2" stroke-width="3" opacity="0.85"/>
-  <!-- floodlights -->
-  <g stroke="#8f97b8" stroke-width="6" opacity="0.9">
-    <line x1="120" y1="120" x2="150" y2="230"/><line x1="680" y1="120" x2="650" y2="230"/>
-  </g>
-  <rect x="96" y="96" width="52" height="20" rx="6" fill="#c9a15e"/>
-  <rect x="652" y="96" width="52" height="20" rx="6" fill="#c9a15e"/>
-  <!-- crowd dots -->
-  <g fill="#c9a15e" opacity="0.55">
-    <circle cx="260" cy="205" r="3"/><circle cx="320" cy="196" r="3"/><circle cx="480" cy="196" r="3"/>
-    <circle cx="540" cy="205" r="3"/><circle cx="200" cy="250" r="3"/><circle cx="600" cy="250" r="3"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#1c2340"/><stop offset="1" stop-color="#54628f"/>
+</linearGradient>
+</defs>
+<rect width="800" height="450" fill="#0d0d14"/>
+<rect width="800" height="450" fill="url(#g)" opacity="0.85"/>
+<circle cx="656" cy="112" r="202" fill="#ffffff" opacity="0.06"/>
+<circle cx="120" cy="405" r="158" fill="#000000" opacity="0.18"/>
+<text x="400.0" y="217" font-family="Arial, sans-serif" font-size="38" font-weight="bold" fill="#ffffff" text-anchor="middle">FC Barcelona Stadium</text>
+<text x="400.0" y="256" font-family="monospace" font-size="17" letter-spacing="6" fill="#ffffff" opacity="0.75" text-anchor="middle">UNITY 3D EXPERIENCE</text>
 </svg>
